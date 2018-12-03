@@ -1,0 +1,20 @@
+{
+  "name": "weareader",
+  "version": "1.0.0",
+  "description": "weather reading project using socket io, react, node.js and storing data into mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "mongoose": "^5.3.14",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.3",
+    "socket.io": "^2.2.0"
+  }
+}
