@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apexcharts": "^2.4.2",
     "react": "^16.6.3",
+    "react-apexcharts": "^1.2.0",
     "react-dom": "^16.6.3",
+    "react-google-charts": "^3.0.10",
     "react-scripts": "2.1.1",
     "socket.io-client": "^2.2.0"
   },

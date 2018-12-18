@@ -1,11 +1,11 @@
 var os = require('os-utils');
 var request = require('request')
 
-
 var cpuUsage;
 var freeMem;
 var sysTime;
 
+//Läheettää POST requestin kerran sekunnissa, bodyssä cpuUsage, freeMem, sysTime
 var requestLoop = setInterval(function(){
     os.cpuUsage(function(v){
         cpuUsage=Math.round(v*100);
@@ -32,7 +32,7 @@ request(options, function (error, response, body) {
 });
   }, 1000);
 
-
+// Muuttaa sekunnit dd-hh-mm-ss formaattiin
 function secondsToDhms(seconds) {
     seconds = Number(seconds);
     var d = Math.floor(seconds / (3600*24));
