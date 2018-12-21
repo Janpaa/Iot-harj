@@ -5,6 +5,10 @@ var cpuUsage;
 var freeMem;
 var sysTime;
 
+// Data reader
+//npm install
+//npm os-reader.js
+
 //Läheettää POST requestin kerran sekunnissa, bodyssä cpuUsage, freeMem, sysTime
 var requestLoop = setInterval(function(){
     os.cpuUsage(function(v){

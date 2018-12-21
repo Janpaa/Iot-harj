@@ -2,15 +2,19 @@ import React, { Component } from "react";
 import socketIOClient from "socket.io-client";
 import Chart from "react-google-charts";
 import './App.css';
-import logo from './logo.svg';
+
+// npm install
+// npm start
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      counter: 0,
       response: [],
       endpoint: "http://127.0.0.1:4001",
       data:[
-        ['Time','usage']
+        ['Time', 'CPU usage']
       ]
     };
   }
@@ -23,13 +27,16 @@ class App extends Component {
   }
   lisaadata(d){
     var data = this.state.data;
-    var counter = data.length -1;
-
-    var arr = [counter,parseInt(d)];
+    var counter = this.state.counter;
+    if (data.length>60){
+      data.splice(1,1);
+    }
+    counter++;
     this.setState({response1:d});
+    var arr = [counter,parseInt(d)];
     this.setState({data:data.concat([arr])})
     this.setState({counter:counter})
-    console.log(arr);
+    console.log(data);
   }
 
   render() {
